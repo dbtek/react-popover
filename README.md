@@ -3,12 +3,12 @@ Totally controlled popover component based on [React Overlays](https://github.co
 
 ## Install
 ```bash
- $ npm install react-popover
+ $ npm install react-simple-popover
 ```
 
 ## Usage
 ```js
-import 'Popover' from 'react-popover';
+import 'Popover' from 'react-simple-popover';
 import React, { Component } from 'react';
 
 class PopoverDemo extends Component {
