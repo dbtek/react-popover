@@ -1,4 +1,4 @@
-# React Popover
+# React Simple Popover
 Totally controlled popover component based on [React Overlays](https://github.com/react-bootstrap/react-overlays).
 
 ## Install
