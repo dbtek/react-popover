@@ -1,7 +1,6 @@
 import React from 'react';
 import Overlay from 'react-overlays/lib/Overlay';
 
-// Styles Mostly from Bootstrap
 const PopoverStyle = {
   position: 'absolute',
   padding: '0 5px'
