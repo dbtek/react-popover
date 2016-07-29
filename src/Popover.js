@@ -75,7 +75,7 @@ const Popover = props => (
     target={ p => ReactDOM.findDOMNode(props.target)}
     rootClose={ props.hideWithOutsideClick || true }
   >
-    <PopoverContent innerStyle={ props.style }>
+    <PopoverContent innerStyle={props.style} style={props.containerStyle}>
       {props.children}
     </PopoverContent>
   </Overlay>
