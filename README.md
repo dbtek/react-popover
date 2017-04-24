@@ -64,5 +64,5 @@ Hide callback function.
 Target ref to align popover around target element.
 
 ## Author
-Ismail Demirbilek - [@dbtek](https://twitter.com/dbtek)
+Ismail Demirbilek - [@dbtek](https://twitter.com/dbtek)  
 MIT Licensed
