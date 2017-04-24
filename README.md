@@ -54,13 +54,13 @@ class PopoverDemo extends Component {
 **placement**  
 One of `left`, `right`, `bottom` or `top`.
 
-**show**
-Boolean, `true` if popover is shown; `false otherwise.
+**show**  
+Boolean, `true` if popover is shown; `false` otherwise.
 
-**onHide**
+**onHide**  
 Hide callback function.
 
-**target**
+**target**  
 Target ref to align popover around target element.
 
 ## Author
