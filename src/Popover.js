@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Overlay from 'react-overlays/lib/Overlay';
 
 const PopoverStyle = {

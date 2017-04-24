@@ -8,7 +8,7 @@ Totally controlled popover component based on [React Overlays](https://github.co
 
 ## Usage
 ```js
-import 'Popover' from 'react-simple-popover';
+import Popover from 'react-simple-popover';
 import React, { Component } from 'react';
 
 class PopoverDemo extends Component {
@@ -48,6 +48,20 @@ class PopoverDemo extends Component {
   }
 }
 ```
+
+## Options
+
+**placement**  
+One of `left`, `right`, `bottom` or `top`.
+
+**show**
+Boolean, `true` if popover is shown; `false otherwise.
+
+**onHide**
+Hide callback function.
+
+**target**
+Target ref to align popover around target element.
 
 ## Author
 Ismail Demirbilek - [@dbtek](https://twitter.com/dbtek)
