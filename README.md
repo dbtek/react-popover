@@ -1,5 +1,11 @@
-# React Simple Popover
-Totally controlled popover component based on [React Overlays](https://github.com/react-bootstrap/react-overlays).
+<div align="center">
+ <h1>React Simple Popover</h1>
+ <p>
+  Totally controlled popover component based on <a href="https://github.com/react-bootstrap/react-overlays">React Overlays</a>.
+ </p>
+
+ <img src="demo.gif" alt="Demo"/>
+</div>
 
 ## Install
 ```bash
