@@ -5,6 +5,8 @@
  </p>
 
  <img src="demo.gif" alt="Demo"/>
+ 
+ <a href="https://www.webpackbin.com/bins/-KiVPQd-vT8slT-uPkq_">Try yourself</a>
 </div>
 
 ## Install
@@ -12,7 +14,8 @@
  $ npm install react-simple-popover
 ```
 
-## Usage
+
+## Usage
 ```js
 import Popover from 'react-simple-popover';
 import React, { Component } from 'react';
