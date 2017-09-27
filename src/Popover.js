@@ -88,7 +88,7 @@ Popover.propTypes = {
   onHide: PropTypes.func,
   placement: PropTypes.string,
   target: PropTypes.instanceOf(Node),
-  styleStyle: PropTypes.object,
+  style: PropTypes.object,
   containerStyle: PropTypes.object,
   container: PropTypes.element,
   hideWithOutsideClick: PropTypes.bool,
