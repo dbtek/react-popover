@@ -72,6 +72,19 @@ Hide callback function.
 **target**  
 Target ref to align popover around target element.
 
+**container**  
+Reference to the component that represents the context
+
+**hideWithOutsideClick**  
+Boolean, `true` if popover should hide when clicked outside; `false` otherwise.
+
+**containerStyle**  
+Style for outermost container
+
+**style**  
+Style for the content's container 
+
+
 ## Author
 Ismail Demirbilek - [@dbtek](https://twitter.com/dbtek)  
 MIT Licensed
