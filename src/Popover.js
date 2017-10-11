@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Overlay from 'react-overlays/lib/Overlay';
+import PropTypes from 'prop-types';
 
 const PopoverStyle = {
   position: 'absolute',
@@ -27,29 +28,29 @@ const PopoverArrowStyle = {
 
 const PlacementStyles = {
   left: {
-    tooltip: { marginLeft: -3, padding: '0 5px' },
+    tooltip: {marginLeft: -3, padding: '0 5px'},
     arrow: {
       right: 0, marginTop: -5, borderWidth: '5px 0 5px 5px', borderLeftColor: '#fff'
     }
   },
   right: {
-    tooltip: { marginRight: 3, padding: '0 5px' },
-    arrow: { left: 0, marginTop: -5, borderWidth: '5px 5px 5px 0', borderRightColor: '#fff' }
+    tooltip: {marginRight: 3, padding: '0 5px'},
+    arrow: {left: 0, marginTop: -5, borderWidth: '5px 5px 5px 0', borderRightColor: '#fff'}
   },
   top: {
-    tooltip: { marginTop: -3, padding: '5px 0' },
-    arrow: { bottom: 0, marginLeft: -5, borderWidth: '5px 5px 0', borderTopColor: '#fff' }
+    tooltip: {marginTop: -3, padding: '5px 0'},
+    arrow: {bottom: 0, marginLeft: -5, borderWidth: '5px 5px 0', borderTopColor: '#fff'}
   },
   bottom: {
-    tooltip: { marginBottom: 3, padding: '5px 0' },
-    arrow: { top: 0, marginLeft: -5, borderWidth: '0 5px 5px', borderBottomColor: '#fff' }
+    tooltip: {marginBottom: 3, padding: '5px 0'},
+    arrow: {top: 0, marginLeft: -5, borderWidth: '0 5px 5px', borderBottomColor: '#fff'}
   }
 };
 
 const PopoverContent = props => {
-  let placementStyle = PlacementStyles[props.placement];
+  const placementStyle = PlacementStyles[props.placement];
 
-  let {
+  const {
     style,
     innerStyle,
     arrowOffsetLeft: left = placementStyle.arrow.left,
@@ -59,7 +60,7 @@ const PopoverContent = props => {
 
   return (
     <div style={{...PopoverStyle, ...placementStyle.tooltip, ...style}}>
-      <div style={{...PopoverArrowStyle, ...placementStyle.arrow, left, top }}/>
+      <div style={{...PopoverArrowStyle, ...placementStyle.arrow, left, top}}/>
       <div style={{...PopoverInnerStyle, ...innerStyle}}>
         {children}
       </div>
@@ -73,13 +74,32 @@ const Popover = props => (
     onHide={props.onHide}
     placement={props.placement}
     container={props.container}
-    target={ p => ReactDOM.findDOMNode(props.target)}
-    rootClose={ props.hideWithOutsideClick || true }
+    target={p => ReactDOM.findDOMNode(props.target)}
+    rootClose={props.hideWithOutsideClick}
   >
     <PopoverContent innerStyle={props.style} style={props.containerStyle}>
       {props.children}
     </PopoverContent>
   </Overlay>
 );
+
+Popover.propTypes = {
+  show: PropTypes.bool.isRequired,
+  onHide: PropTypes.func,
+  placement: PropTypes.string,
+  target: PropTypes.instanceOf(Node),
+  style: PropTypes.object,
+  containerStyle: PropTypes.object,
+  container: PropTypes.element,
+  hideWithOutsideClick: PropTypes.bool,
+  children: PropTypes.element.isRequired
+};
+
+Popover.defaultProps = {
+  onHide: () => {
+  },
+  placement: 'bottom',
+  hideWithOutsideClick: true
+};
 
 export default Popover;
