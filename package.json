@@ -9,6 +9,8 @@
   "main": "lib/Popover.js",
   "dependencies": {
     "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-overlays": "^0.8.3"
   },
   "devDependencies": {
@@ -19,9 +21,7 @@
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "babel-preset-stage-0": "^6.24.1"
   },
   "scripts": {
     "test": "npm test",
