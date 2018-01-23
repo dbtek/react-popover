@@ -87,10 +87,10 @@ Popover.propTypes = {
   show: PropTypes.bool.isRequired,
   onHide: PropTypes.func,
   placement: PropTypes.string,
-  target: PropTypes.instanceOf(Node),
+  target: PropTypes.object,
   style: PropTypes.object,
   containerStyle: PropTypes.object,
-  container: PropTypes.element,
+  container: PropTypes.object,
   hideWithOutsideClick: PropTypes.bool,
   children: PropTypes.element.isRequired
 };
