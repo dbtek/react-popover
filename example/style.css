@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica Neu, Arial, sans-serif;
+}
+
+a {
+  color: #42A5F5;
+  text-decoration: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
