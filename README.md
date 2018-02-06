@@ -84,6 +84,9 @@ Style for outermost container
 **style**  
 Style for the content's container 
 
+**arrowStyle**  
+Style for the direction arrow.
+Set `color` to specify the arrow color.
 
 ## Author
 Ismail Demirbilek - [@dbtek](https://twitter.com/dbtek)  

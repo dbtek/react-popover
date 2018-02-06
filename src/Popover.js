@@ -53,14 +53,33 @@ const PopoverContent = props => {
   const {
     style,
     innerStyle,
+    arrowStyle,
     arrowOffsetLeft: left = placementStyle.arrow.left,
     arrowOffsetTop: top = placementStyle.arrow.top,
     children
   } = props;
 
+  if (arrowStyle.color) {
+    switch (props.placement) {
+      case 'left':
+        arrowStyle.borderLeftColor = arrowStyle.color;
+        break;
+      case 'right':
+        arrowStyle.borderRightColor = arrowStyle.color;
+        break;
+      case 'top':
+        arrowStyle.borderTopColor = arrowStyle.color;
+        break;
+      case 'bottom':
+        arrowStyle.borderBottomColor = arrowStyle.color;
+        break;
+    }
+    delete arrowStyle.color;
+  }
+
   return (
     <div style={{...PopoverStyle, ...placementStyle.tooltip, ...style}}>
-      <div style={{...PopoverArrowStyle, ...placementStyle.arrow, left, top}}/>
+      <div style={{...PopoverArrowStyle, ...placementStyle.arrow, ...arrowStyle, left, top}}/>
       <div style={{...PopoverInnerStyle, ...innerStyle}}>
         {children}
       </div>
@@ -77,7 +96,7 @@ const Popover = props => (
     target={p => ReactDOM.findDOMNode(props.target)}
     rootClose={props.hideWithOutsideClick}
   >
-    <PopoverContent innerStyle={props.style} style={props.containerStyle}>
+    <PopoverContent arrowStyle={props.arrowStyle} innerStyle={props.style} style={props.containerStyle}>
       {props.children}
     </PopoverContent>
   </Overlay>
@@ -89,6 +108,7 @@ Popover.propTypes = {
   placement: PropTypes.string,
   target: PropTypes.object,
   style: PropTypes.object,
+  arrowStyle: PropTypes.object,
   containerStyle: PropTypes.object,
   container: PropTypes.object,
   hideWithOutsideClick: PropTypes.bool,
