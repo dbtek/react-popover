@@ -28,10 +28,21 @@ class App extends Component {
             <a href="https://github.com/dbtek/react-popover">Github</a>
           </p>
         </div>
-
-        <Pop />
-        <Pop />
-        <Pop />
+        <p className="App-intro">
+          To see popover{' '}
+          <a href="#" ref="target" onClick={this.handleClick.bind(this)}>
+            click here
+          </a>.
+          <Popover
+            placement="right"
+            container={this}
+            target={this.refs.target}
+            show={this.state.open}
+            onHide={this.handleClose.bind(this)}
+          >
+            <p>Hey! This is the popover. Click outside to close it.</p>
+          </Popover>
+        </p>
         <Pop />
       </div>
     );
