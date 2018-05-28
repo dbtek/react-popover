@@ -28,11 +28,11 @@ class PopoverDemo extends Component {
     };
   }
 
-  handleClick(e) {
+  handleClick = (e) => {
     this.setState({open: !this.state.open});
   }
 
-  handleClose(e) {
+  handleClose = (e) => {
     this.setState({open: false});
   }
 
@@ -42,14 +42,14 @@ class PopoverDemo extends Component {
         <a
           href="#"
           className="button"
-          ref="target"
-          onClick={this.handleClick.bind(this)}>Popover</a>
+          ref={(node) => { this.target = node }}
+          onClick={this.handleClick}>Popover</a>
         <Popover
           placement='left'
           container={this}
-          target={this.refs.target}
+          target={this.target}
           show={this.state.open}
-          onHide={this.handleClose.bind(this)} >
+          onHide={this.handleClose} >
           <p>This is popover</p>
         </Popover>
       </div>
