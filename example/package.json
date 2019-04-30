@@ -7,10 +7,12 @@
     "start": "parcel index.html"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-overlays": "^0.8.3"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "parcel": "^1.8.1"
   }
 }
