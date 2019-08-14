@@ -39,8 +39,9 @@ class App extends Component {
             target={this.refs.target}
             show={this.state.open}
             onHide={this.handleClose.bind(this)}
+            showArrow={false}
           >
-            <p>Hey! This is the popover. Click outside to close it.</p>
+            <p>Hey! This is the popover without arrow. Click outside to close it.</p>
           </Popover>
         </p>
         <Pop />

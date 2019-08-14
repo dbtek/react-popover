@@ -74,14 +74,18 @@ const PopoverContent = props => {
     innerStyle,
     arrowOffsetLeft: left = placementStyle.arrow.left,
     arrowOffsetTop: top = placementStyle.arrow.top,
-    children
+    children,
+    showArrow,
+    arrowStyle
   } = props;
 
   return (
     <div style={{ ...PopoverStyle, ...placementStyle.tooltip, ...style }}>
-      <div
-        style={{ ...PopoverArrowStyle, ...placementStyle.arrow, left, top }}
-      />
+      {showArrow && (
+        <div
+          style={{ ...PopoverArrowStyle, ...placementStyle.arrow, ...arrowStyle, left, top }}
+        />
+      )}
       <div style={{ ...PopoverInnerStyle, ...innerStyle }}>{children}</div>
     </div>
   );
@@ -104,7 +108,12 @@ const Popover = props => {
       target={p => ReactDOM.findDOMNode(props.target)}
       rootClose={props.hideWithOutsideClick}
     >
-      <PopoverContent innerStyle={props.style} style={props.containerStyle}>
+      <PopoverContent
+        showArrow={props.showArrow}
+        arrowStyle={props.arrowStyle}
+        innerStyle={props.style}
+        style={props.containerStyle}
+      >
         {props.children}
       </PopoverContent>
     </Overlay>
@@ -118,15 +127,18 @@ Popover.propTypes = {
   target: PropTypes.object,
   style: PropTypes.object,
   containerStyle: PropTypes.object,
+  arrowStyle: PropTypes.object,
   container: PropTypes.object,
   hideWithOutsideClick: PropTypes.bool,
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  showArrow: PropTypes.bool
 };
 
 Popover.defaultProps = {
   onHide: () => {},
   placement: 'bottom',
-  hideWithOutsideClick: true
+  hideWithOutsideClick: true,
+  showArrow: true
 };
 
 export default Popover;
