@@ -42,7 +42,7 @@ class Pop extends Component {
           show={this.state.open}
           onHide={this.handleClose.bind(this)}
         >
-          <p>Hey! This is the popover. Click outside to close it.</p>
+          <p>Hey! This is the popover with arrow. Click outside to close it.</p>
         </Popover>
       </div>
     );

@@ -66,6 +66,9 @@ One of `left`, `right`, `bottom` or `top`.
 **show**  
 Boolean, `true` if popover is shown; `false` otherwise.
 
+**showArrow**  
+Boolean, set `false` to hide arrow. Default is `true`.
+
 **onHide**  
 Hide callback function.
 
@@ -80,6 +83,9 @@ Boolean, `true` if popover should hide when clicked outside; `false` otherwise.
 
 **containerStyle**  
 Style for outermost container
+
+**arrowStyle**  
+Style for arrow
 
 **style**  
 Style for the content's container 
